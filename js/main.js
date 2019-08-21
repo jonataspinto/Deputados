@@ -13,22 +13,20 @@ const mountCard = (content)=>{
         // let date = new Date(element.commit.author.date)
         let ins = `
 
-        <div class="col s12 m6 l4 center-align">
-        <div class=" ">
+        <aside class="col s12 m6 l4 ">
           <div class="card">
             <div class="card-image">
-              <img src="${content.dados[i].urlFoto}" style="width: 50$">
+              <img src="${content.dados[i].urlFoto}" style="width: 40%">
+              </div>
+              <div class="card-content">
               <span class="card-title">${content.dados[i].nome}</span>
-            </div>
-            <div class="card-content">
               <p>${content.dados[i].email}</p>
             </div>
             <div class="card-action">
-              <a href="#">This is a link</a>
+              <a href="#">ID: ${content.dados[i].id}</a>
             </div>
           </div>
-        </div>
-      </div>
+      </aside>
         `
     document.getElementById('container').innerHTML += ins
         
@@ -45,6 +43,7 @@ $('.dropdown-button').dropdown({
 
 $( document ).ready(function() {
 $('.sidenav').sidenav();
+$('.slider').slider();
 $('.tooltipped').tooltip();
 $('.modal').modal();
 });
